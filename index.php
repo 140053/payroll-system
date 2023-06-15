@@ -21,7 +21,12 @@ if ( isset($_SESSION['Admin_ID']) && $_SESSION['Login_Type'] == 'emp' ) {
     <link rel="stylesheet" href="<?php echo BASE_URL; ?>plugins0/icheck-bootstrap/icheck-bootstrap.min.css">
     <!-- Theme style -->
     <link rel="stylesheet" href="<?php echo BASE_URL; ?>dist0/css/adminlte.min.css">
-    
+    <style>
+      .dark-mode input:-webkit-autofill{
+        -webkit-text-fill-color: #000;
+      }
+
+    </style>
 </head>
 
 <body class="login-page dark-mode" style="min-height: 466px;">
@@ -69,6 +74,6 @@ if ( isset($_SESSION['Admin_ID']) && $_SESSION['Login_Type'] == 'emp' ) {
 </div>
 <!-- /.login-box -->
 
-<?php  require_once(dirname(__FILE__) . '/partials/flink.php');  ?>
+<?php  require_once(dirname(__FILE__) . '/partials/fDlink.php');  ?>
 
 </html>
