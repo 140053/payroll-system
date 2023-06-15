@@ -18,12 +18,16 @@ if ( $attendanceSQL ) {
 } else {
 	$attendanceROW = 0;
 	$action_name = 'Punch In';
-} ?>
+} 
+
+
+
+?>
 
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="index3.html" class="brand-link">
+    <a href="<?php echo BASE_URL; ?>" class="brand-link">
       <img src="<?php echo BASE_URL; ?>dist0/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
       <span class="brand-text font-weight-light">AdminLTE 3</span>
     </a>
@@ -41,7 +45,12 @@ if ( $attendanceSQL ) {
           
         </div>
         <div class="info">
-          <a href="#" class="d-block">Alexander Pierce</a>
+		<?php if ( $_SESSION['Login_Type'] == 'admin' ) { ?>
+			<a href="#" class="d-block"><?php echo $userData['admin_name']; ?></a>
+		<?php }else{ ?>
+			<a href="#" class="d-block"><?php echo $userData['first_name']; ?> <?php echo $userData['last_name']; ?></a>
+		<?php } ?>
+         
         </div>
       </div>
 
@@ -211,15 +220,76 @@ if ( $attendanceSQL ) {
 
 
 		<?php }else{ ?>
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-th"></i>
-              <p>
-                Simple Link
-                <span class="right badge badge-danger">New</span>
-              </p>
-            </a>
-          </li>
+			<li class="nav-item <?php echo $page_name == "salaries" ? 'active' : ''; ?>  ">
+				<a   class="nav-link <?php echo $page_name == "salaries" ? 'active' : ''; ?>">
+				<i class="nav-icon  fa fa-solid fa-money-bill-wave"></i>
+				<p>
+					Salary Slips
+					<i class="right fas fa-angle-left"></i>
+				</p>
+				</a>
+				<ul class="nav nav-treeview">
+				<li class="nav-item">
+					<a href="<?php echo BASE_URL; ?>salaries/" class="nav-link active">
+					<i class="far fa-circle nav-icon"></i>
+					<p>View</p>
+					</a>
+				</li>
+				<li class="nav-item">
+					<a href="#" class="nav-link">
+					<i class="far fa-circle nav-icon"></i>
+					<p>Inactive Page</p>
+					</a>
+				</li>
+				</ul>
+			</li>
+			<li class="nav-item <?php echo $page_name == "leaves" ? 'active' : ''; ?>  ">
+				<a   class="nav-link <?php echo $page_name == "leaves" ? 'active' : ''; ?>">				
+				<i class=" nav-icon  fas fa-walking"></i>
+				<p>
+					Leave Management
+					<i class="right fas fa-angle-left"></i>
+				</p>
+				</a>
+				<ul class="nav nav-treeview">
+				<li class="nav-item">
+					<a href="<?php echo BASE_URL; ?>leaves/" class="nav-link active">
+					<i class="far fa-circle nav-icon"></i>
+					<p>View</p>
+					</a>
+				</li>
+				<li class="nav-item">
+					<a href="#" class="nav-link">
+					<i class="far fa-circle nav-icon"></i>
+					<p>Inactive Page</p>
+					</a>
+				</li>
+				</ul>
+			</li>
+
+			<li class="nav-item <?php echo $page_name == "holidays" ? 'active' : ''; ?>  ">
+				<a   class="nav-link <?php echo $page_name == "holidays" ? 'active' : ''; ?>">
+				<i class=" nav-icon  far fa-calendar-times"></i>
+				<p>
+					List of Holidays
+					<i class="right fas fa-angle-left"></i>
+				</p>
+				</a>
+				<ul class="nav nav-treeview">
+				<li class="nav-item">
+					<a href="<?php echo BASE_URL; ?>holidays/" class="nav-link active">
+					<i class="far fa-circle nav-icon"></i>
+					<p>View</p>
+					</a>
+				</li>
+				<li class="nav-item">
+					<a href="#" class="nav-link">
+					<i class="far fa-circle nav-icon"></i>
+					<p>Inactive Page</p>
+					</a>
+				</li>
+				</ul>
+			</li>
 
 		<?php } ?>
         </ul>

@@ -41,7 +41,7 @@ session_start();
 
 include(dirname(__FILE__) . '/functions.php');
 
-//if ( isset($_SESSION['Admin_ID']) && isset($_SESSION['Login_Type']) )
-//  $userData = GetDataByIDAndType($_SESSION['Admin_ID'], $_SESSION['Login_Type']);
-//else
-//  $userData = array();
+if ( isset($_SESSION['Admin_ID']) && isset($_SESSION['Login_Type']) )
+  $userData = GetDataByIDAndType($_SESSION['Admin_ID'], $_SESSION['Login_Type']);
+else
+  $userData = array();

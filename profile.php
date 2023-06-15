@@ -55,6 +55,7 @@ if ( !isset($_SESSION['Admin_ID']) || !isset($_SESSION['Login_Type']) ) {
 
 									<div class="row">
 										<?php
+										
 										if ( $_SESSION['Login_Type'] == 'admin' ) {
 											$query = mysqli_query($db, "SELECT * FROM `" . DB_PREFIX . "admin` WHERE `admin_id` = " . $_SESSION['Admin_ID']);
 											if ( $query ) {
