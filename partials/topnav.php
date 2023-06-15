@@ -60,7 +60,7 @@
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="index3.html" class="nav-link">Home</a>
+        <a href="<?php echo BASE_URL; ?>" class="nav-link">Home</a>
       </li>
      
     </ul>
@@ -96,13 +96,54 @@
           <i class="fas fa-expand-arrows-alt"></i>
         </a>
       </li>
+
+	  <li class="nav-litem">
+	  	<div class="nav-link navbar-custom-menu">
+			<ul class="nav navbar-nav">
+				<li class="dropdown user user-menu">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+						<?php if ( $_SESSION['Login_Type'] == 'admin' ) { ?>
+							<img src="<?php echo BASE_URL; ?>dist/img/admin-bg.png" class="user-image" alt="User Image">
+							<span class="hidden-xs"><?php echo $userData['admin_name']; ?></span>
+						<?php } else { ?>
+							<img src="<?php echo REG_URL; ?>photos/<?php echo $userData['photo']; ?>" class="user-image" alt="User Image">
+							<span class="hidden-xs"><?php echo $userData['first_name']; ?> <?php echo $userData['last_name']; ?></span>
+						<?php } ?>
+					</a>
+					<ul class="dropdown-menu">
+						<li class="user-header">
+							<?php if ( $_SESSION['Login_Type'] == 'admin' ) { ?>
+								<img src="<?php echo BASE_URL; ?>dist0/img/admin-bg.png" class="img-circle" alt="User Image">
+							<?php } else { ?>
+								<img src="<?php echo REG_URL; ?>photos/<?php echo $userData['photo']; ?>" class="img-circle" alt="User Image">
+							<?php } ?>
+							<p>
+								<?php if ( $_SESSION['Login_Type'] == 'admin' ) { ?>
+									Administrator
+								<?php } else { ?>
+									<?php echo $userData['first_name']; ?> <?php echo $userData['last_name']; ?>
+									<small>Employee</small>
+								<?php } ?>
+								<small><?php echo COMPANY_NAME; ?></small>
+							</p>
+						</li>
+						<li class="user-footer">
+							<div class="float-left">
+								<a href="<?php echo BASE_URL; ?>profile/" class="btn btn-default btn-flat">Profile</a>
+							</div>
+							<div class="float-right">
+								<a href="<?php echo BASE_URL; ?>logout/" class="btn btn-default btn-flat">Logout</a>
+							</div>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	  </li>
      
 
-      <li class="nav-item">
-        <a class="nav-link" data-widget="" href="../logout.php" role="button">
-          <i class="fas fa-sign-out">Sign Out</i>
-        </a>
-      </li>
+      
+
     </ul>
   </nav>
   <!-- /.navbar -->
