@@ -1,5 +1,7 @@
 <!-- jQuery -->
-<script src="<?php echo BASE_URL; ?>plugins0/jquery/jquery.min.js"></script>
+<script src="<?php echo BASE_URL; ?>plugins0/jquery/jquery.js"></script>
+<script src="<?php echo BASE_URL; ?>plugins0/jquery-ui/jquery-ui.js"></script>
+
 <!-- Bootstrap 4 -->
 <script src="<?php echo BASE_URL; ?>plugins0/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- DataTables  & plugins0 -->

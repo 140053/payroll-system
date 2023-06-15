@@ -1,14 +1,30 @@
 
 
+<!-- jQuery -->
+<script src="<?php echo BASE_URL; ?>plugins0/jquery/jquery.js"></script>
+<script src="<?php echo BASE_URL; ?>plugins0/jquery-ui/jquery-ui.js"></script>
+<!-- Bootstrap 4 -->
+<script src="<?php echo BASE_URL; ?>plugins0/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- DataTables  & plugins0 -->
+<script src="<?php echo BASE_URL; ?>plugins0/datatables/jquery.dataTables.min.js"></script>
+<script src="<?php echo BASE_URL; ?>plugins0/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+<script src="<?php echo BASE_URL; ?>plugins0/datatables-responsive/js/dataTables.responsive.min.js"></script>
+<script src="<?php echo BASE_URL; ?>plugins0/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+<script src="<?php echo BASE_URL; ?>plugins0/datatables-buttons/js/dataTables.buttons.min.js"></script>
+<script src="<?php echo BASE_URL; ?>plugins0/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+<script src="<?php echo BASE_URL; ?>plugins0/jszip/jszip.min.js"></script>
+<script src="<?php echo BASE_URL; ?>plugins0/pdfmake/pdfmake.min.js"></script>
+<script src="<?php echo BASE_URL; ?>plugins0/pdfmake/vfs_fonts.js"></script>
+<script src="<?php echo BASE_URL; ?>plugins0/datatables-buttons/js/buttons.html5.min.js"></script>
+<script src="<?php echo BASE_URL; ?>plugins0/datatables-buttons/js/buttons.print.min.js"></script>
+<script src="<?php echo BASE_URL; ?>plugins0/datatables-buttons/js/buttons.colVis.min.js"></script>
 
-    <script src="<?php echo BASE_URL; ?>plugins0/jQuery/jquery-2.2.3.min.js"></script>
-	<script src="<?php echo BASE_URL; ?>plugins0/bootstrap/js/bootstrap.min.js"></script>
-    <script src="<?php echo BASE_URL; ?>plugins0/popper/esm/popper.min.js"></script>
-	<script src="<?php echo BASE_URL; ?>plugins0/jquery-validator/validator.min.js"></script>
-	<script src="<?php echo BASE_URL; ?>plugins0/datatables/jquery.dataTables.min.js"></script>
-	<script src="<?php echo BASE_URL; ?>plugins0/datatables/dataTables.bootstrap.min.js"></script>
-	<script src="<?php echo BASE_URL; ?>plugins0/bootstrap-notify/bootstrap-notify.min.js"></script>
-	<script src="<?php echo BASE_URL; ?>plugins0/datepicker/bootstrap-datepicker.js"></script>
-	<script src="<?php echo BASE_URL; ?>dist0/js/app.min.js"></script>
-	<script type="text/javascript">var baseurl = '<?php echo BASE_URL; ?>';</script>
-	<script src="<?php echo BASE_URL; ?>dist0/js/script.js?rand=<?php echo rand(); ?>"></script>
+<script src="<?php echo BASE_URL; ?>plugins0/jquery-validator/validator.min.js"></script>
+<script src="<?php echo BASE_URL; ?>plugins0/bootstrap-notify/bootstrap-notify.min.js"></script>
+<script src="<?php echo BASE_URL; ?>plugins0/datepicker/bootstrap-datepicker.js"></script>
+<script src="<?php echo BASE_URL; ?>plugins/iCheck/icheck.min.js"></script>
+<!-- AdminLTE App -->
+<script src="<?php echo BASE_URL; ?>dist0/js/adminlte.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script type="text/javascript">var baseurl = '<?php echo BASE_URL; ?>';</script>
+<script src="<?php echo BASE_URL; ?>dist0/js/script.js?rand=<?php echo rand(); ?>"></script>

@@ -55,11 +55,15 @@ if ( $attendanceSQL ) {
 		<ul class="sidebar-menu">
 			<li class="header">NAVIGATION</li>
 			<?php if ( $_SESSION['Login_Type'] == 'admin' ) { ?>
+
 				<li class="<?php echo $page_name == "attendance" ? 'active' : ''; ?>">
 					<a href="<?php echo BASE_URL; ?>attendance/">
 						<i class="fa fa-calendar"></i> <span>Attendance</span>
 					</a>
 				</li>
+
+
+				
 				<li class="<?php echo $page_name == "employees" ? 'active' : ''; ?>">
 					<a href="<?php echo BASE_URL; ?>employees/">
 						<i class="fa fa-users"></i> <span>Employees Section</span>
